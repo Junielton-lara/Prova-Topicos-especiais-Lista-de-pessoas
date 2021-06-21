@@ -1,0 +1,15 @@
+###
+
+GET http://localhost:3000/pessoa/listar
+
+###
+
+POST http://localhost:3000/pessoa/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Ana paula",
+    "cpf": "85214778912",
+    "idade": 21
+}
+
