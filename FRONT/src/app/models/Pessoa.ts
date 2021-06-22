@@ -4,4 +4,5 @@ export class Pessoa
     nome?: string;
     cpf?: string;
     idade?: Number;
+    createdAt?: Date;
 }

@@ -1,7 +1,30 @@
-<ul *ngFor="let pessoa of pessoas">
-    <li>{{ pessoa.nome }}</li>
-</ul>
+<a routerLink="/pessoa/cadastrar">Cadastrar pessoa</a>
 
-<select>
-    <option *ngFor="let pessoa of pessoas"> {{ pessoa._id }} </option>
-</select>
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Idade</th>
+            <th>Criado em </th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+            <td>
+                {{ pessoa.nome }}
+            </td>
+            <td>
+                {{ pessoa.cpf }}
+            </td>
+            <td>
+                {{ pessoa.idade }}
+            </td>
+            <td>
+                {{ pessoa.createdAt | date: "dd/MM/yyyy"}}
+            </td>
+        </tr>
+    </tbody>
+</table>
